@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script>
+function calculate() {
+    let valueA = document.getElementById("A").value;
+    let valueB = document.getElementById("B").value;
+    let valueC = document.getElementById("C").value;
+    let valueD = document.getElementById("D").value;
+
+    let itemTotal = Number(valueA) + Number(valueB) - Number(valueC) - Number(valueD);
+    if(itemTotal > 0){
+        document.getElementById("total").value = Math.round((itemTotal * 1.2) * 100) / 100 ;
+    }
+    else{
+        document.getElementById("total").value = Math.round(itemTotal * 100) / 100;
+    }
+}
+</script>
+    </head>
+    <body>
+<div>
+    <input type="number" id="A"/>
+    <input type="number" id="B"/>
+    <input type="number" id="C"/>
+    <input type="number" id="D"/>
+</div>
+<div>
+    <input type="submit" onclick="calculate()"/>
+</div>
+<div>
+    <input id="total"/>
+</div>
+    </body>
+</html>
